@@ -1,0 +1,91 @@
+{
+  "source": {
+    "hash": "0x1677ba526b72e91323a1dd16c3027a4e5cee105696c18923cec280058d2eef9d",
+    "language": "ink! 3.0.0-rc5",
+    "compiler": "rustc 1.58.0-nightly"
+  },
+  "contract": {
+    "name": "test",
+    "version": "0.1.0",
+    "authors": [
+      "Alexunderlett <Alexunderlett@163.com>"
+    ]
+  },
+  "V1": {
+    "spec": {
+      "constructors": [
+        {
+          "args": [
+            {
+              "name": "index",
+              "type": {
+                "displayName": [
+                  "i32"
+                ],
+                "type": 0
+              }
+            }
+          ],
+          "docs": [],
+          "name": [
+            "new"
+          ],
+          "selector": "0x9bae9d5e"
+        },
+        {
+          "args": [],
+          "docs": [],
+          "name": [
+            "default"
+          ],
+          "selector": "0xed4b9d1b"
+        }
+      ],
+      "docs": [],
+      "events": [],
+      "messages": [
+        {
+          "args": [],
+          "docs": [],
+          "mutates": false,
+          "name": [
+            "get_value"
+          ],
+          "payable": false,
+          "returnType": {
+            "displayName": [
+              "i32"
+            ],
+            "type": 0
+          },
+          "selector": "0xca6f2170"
+        }
+      ]
+    },
+    "storage": {
+      "struct": {
+        "fields": [
+          {
+            "layout": {
+              "cell": {
+                "key": "0x0000000000000000000000000000000000000000000000000000000000000000",
+                "ty": 0
+              }
+            },
+            "name": "index"
+          }
+        ]
+      }
+    },
+    "types": [
+      {
+        "id": 0,
+        "type": {
+          "def": {
+            "primitive": "i32"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,337 @@
+{
+  "source": {
+    "hash": "0x39ec501b74b4854cbecf17037443cd2a125882d590955e11f1c6f7ba4745c0f4",
+    "language": "ink! 3.0.0-rc5",
+    "compiler": "rustc 1.58.0-nightly"
+  },
+  "contract": {
+    "name": "test2",
+    "version": "0.1.0",
+    "authors": [
+      "x <x>"
+    ]
+  },
+  "V1": {
+    "spec": {
+      "constructors": [
+        {
+          "args": [],
+          "docs": [],
+          "name": [
+            "new"
+          ],
+          "selector": "0x9bae9d5e"
+        },
+        {
+          "args": [],
+          "docs": [],
+          "name": [
+            "default"
+          ],
+          "selector": "0xed4b9d1b"
+        }
+      ],
+      "docs": [],
+      "events": [],
+      "messages": [
+        {
+          "args": [
+            {
+              "name": "addr",
+              "type": {
+                "displayName": [
+                  "AccountId"
+                ],
+                "type": 1
+              }
+            }
+          ],
+          "docs": [
+            "第一种实例化",
+            "param  addr: test合约地址"
+          ],
+          "mutates": true,
+          "name": [
+            "test_instance"
+          ],
+          "payable": false,
+          "returnType": {
+            "displayName": [
+              "i32"
+            ],
+            "type": 4
+          },
+          "selector": "0xf887bbb4"
+        },
+        {
+          "args": [
+            {
+              "name": "account_id",
+              "type": {
+                "displayName": [
+                  "Test"
+                ],
+                "type": 5
+              }
+            }
+          ],
+          "docs": [
+            "第二种实例化",
+            "param  addr:test合约地址"
+          ],
+          "mutates": true,
+          "name": [
+            "test_instance2"
+          ],
+          "payable": false,
+          "returnType": {
+            "displayName": [
+              "i32"
+            ],
+            "type": 4
+          },
+          "selector": "0x71129655"
+        },
+        {
+          "args": [
+            {
+              "name": "init_value",
+              "type": {
+                "displayName": [
+                  "i32"
+                ],
+                "type": 4
+              }
+            },
+            {
+              "name": "test_hash",
+              "type": {
+                "displayName": [
+                  "Hash"
+                ],
+                "type": 6
+              }
+            }
+          ],
+          "docs": [
+            "创建新合约"
+          ],
+          "mutates": true,
+          "name": [
+            "creat_new_contract"
+          ],
+          "payable": false,
+          "returnType": {
+            "displayName": [
+              "bool"
+            ],
+            "type": 0
+          },
+          "selector": "0x23b1a0fd"
+        },
+        {
+          "args": [],
+          "docs": [
+            "获取新合约的地址"
+          ],
+          "mutates": false,
+          "name": [
+            "get_new_address"
+          ],
+          "payable": false,
+          "returnType": {
+            "displayName": [
+              "AccountId"
+            ],
+            "type": 1
+          },
+          "selector": "0x85694c9d"
+        },
+        {
+          "args": [],
+          "docs": [
+            "读取新合约的属性"
+          ],
+          "mutates": false,
+          "name": [
+            "get_test_value"
+          ],
+          "payable": false,
+          "returnType": {
+            "displayName": [
+              "i32"
+            ],
+            "type": 4
+          },
+          "selector": "0x4ea2656f"
+        },
+        {
+          "args": [],
+          "docs": [
+            "查看合约的剩余租金"
+          ],
+          "mutates": false,
+          "name": [
+            "get_total_balance"
+          ],
+          "payable": false,
+          "returnType": {
+            "displayName": [
+              "u128"
+            ],
+            "type": 7
+          },
+          "selector": "0xe9c89f50"
+        }
+      ]
+    },
+    "storage": {
+      "struct": {
+        "fields": [
+          {
+            "layout": {
+              "cell": {
+                "key": "0x0000000000000000000000000000000000000000000000000000000000000000",
+                "ty": 0
+              }
+            },
+            "name": "value"
+          },
+          {
+            "layout": {
+              "struct": {
+                "fields": [
+                  {
+                    "layout": {
+                      "cell": {
+                        "key": "0x0100000000000000000000000000000000000000000000000000000000000000",
+                        "ty": 1
+                      }
+                    },
+                    "name": "account_id"
+                  }
+                ]
+              }
+            },
+            "name": "test_instance"
+          },
+          {
+            "layout": {
+              "cell": {
+                "key": "0x0200000000000000000000000000000000000000000000000000000000000000",
+                "ty": 1
+              }
+            },
+            "name": "new_address"
+          }
+        ]
+      }
+    },
+    "types": [
+      {
+        "id": 0,
+        "type": {
+          "def": {
+            "primitive": "bool"
+          }
+        }
+      },
+      {
+        "id": 1,
+        "type": {
+          "def": {
+            "composite": {
+              "fields": [
+                {
+                  "type": 2,
+                  "typeName": "[u8; 32]"
+                }
+              ]
+            }
+          },
+          "path": [
+            "ink_env",
+            "types",
+            "AccountId"
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "type": {
+          "def": {
+            "array": {
+              "len": 32,
+              "type": 3
+            }
+          }
+        }
+      },
+      {
+        "id": 3,
+        "type": {
+          "def": {
+            "primitive": "u8"
+          }
+        }
+      },
+      {
+        "id": 4,
+        "type": {
+          "def": {
+            "primitive": "i32"
+          }
+        }
+      },
+      {
+        "id": 5,
+        "type": {
+          "def": {
+            "composite": {
+              "fields": [
+                {
+                  "name": "account_id",
+                  "type": 1,
+                  "typeName": "AccountId"
+                }
+              ]
+            }
+          },
+          "path": [
+            "test",
+            "test",
+            "Test"
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "type": {
+          "def": {
+            "composite": {
+              "fields": [
+                {
+                  "type": 2,
+                  "typeName": "[u8; 32]"
+                }
+              ]
+            }
+          },
+          "path": [
+            "ink_env",
+            "types",
+            "Hash"
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "type": {
+          "def": {
+            "primitive": "u128"
+          }
+        }
+      }
+    ]
+  }
+}
